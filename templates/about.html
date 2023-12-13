@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+<div style="background-image:url({{ url_for('static', filename='img/background.jpg')}});background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; height: 100vh;">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="about">
+                 <h1 class="about-heading">About the site</h1>
+                 <p>Welcome to the food api site, your go-to source for food information and nutrition facts.This website helps <br>make informed choices for a healthier lifestyle.<br>This is an API site built using spoonacular API.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

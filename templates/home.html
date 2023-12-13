@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+<div style="background-image:url({{ url_for('static', filename='img/background.jpg')}});background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <h1 class="main-heading">Food Fact's</h1>
+    <h2 class="heading">Explore the Nutritional Details of Any Food Product You Desire</h2>
+    <div class="container">
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-8">
+            <form method="POST" action={{url_for('list_of_food')}} class="search">
+              <input type="text" name="search_input" class="form-control" placeholder="Unlock the Secrets of Your Plate – Just Ask, and Know If Your Food Is Healthy or Not!">
+              <button class="btn btn-dark">Search</button>
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

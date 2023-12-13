@@ -1,0 +1,75 @@
+{% include 'header.html' %}
+<div style="background: linear-gradient(to right, #6a1219, #911d1e);background-position: center center;  overflow: auto; ">
+    <h1 style="text-align:center; font-size:50px; font-family: 'Lato', sans-serif; color: white; margin-top:20px; margin-bottom:20px; ">{{name}}</h1>
+    <div class="split-screen">
+        <div class="large">
+            <div class="left">
+            <table class="data">
+                <tr>
+                    <th>SrNo.</th>
+                    <th>Nutrients</th>
+                    <th>Quantity</th>
+                </tr>
+                {% for item in nutrients %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{item['name']}}</td>
+                        <td>{{item['amount']}}{{item['unit']}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+            <div class="middle-left">
+            <table class="data">
+                <tr>
+                    <th>SrNo.</th>
+                    <th>Properties</th>
+                    <th>Score</th>
+                </tr>
+                {% for item in properties %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{item['name']}}</td>
+                        <td>{{item['amount']}}{{item['unit']}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        </div>
+        <div class="small">
+            <div class="middle-right">
+            <table class="data">
+                <tr>
+                    <th>SrNo.</th>
+                    <th>Flavonoids</th>
+                    <th>Quantity</th>
+                </tr>
+                {% for item in flavonoids %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{item['name']}}</td>
+                        <td>{{item['amount']}}{{item['unit']}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+            <div class="right">
+            <table class="data">
+                <tr>
+                    <th>SrNo.</th>
+                    <th>Caloric Breakdown</th>
+                    <th>Percentage</th>
+                </tr>
+                {% for key,value in caloric_breakdown.items() %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{key}}</td>
+                        <td>{{value}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

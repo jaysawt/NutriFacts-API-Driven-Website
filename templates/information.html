@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+{% if not food %}
+<div style="background-image: linear-gradient(to right, #8d93a1, #f1f6f9);background-position: center center; overflow: auto;">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+            <h1 class="no_item_found">Sorry Food item could not be found.<br>Please try again to find other food items by visiting the home page</h1>
+        </div>
+    </div>
+</div>
+{% else %}
+<div style="background-image: linear-gradient(to right, #8d93a1, #f1f6f9);background-position: center center;  overflow: auto;">
+    {% if method == "POST" %}
+        <h1 style="text-align: center; font-size: 50px; padding: 10px;">Your search Results.....</h1>
+    {% else %}
+        <h1 style="text-align: center; font-size: 50px; padding: 10px;">Example(Visit Home page to explore more)</h1>
+    {% endif %}
+    <div class="row justify-content-center">
+        {% for item in food %}
+            <div class="col-xs-12 col-sm-6 col-md-4" style="padding-bottom: 20px;">
+                <div class="card">
+                    <img src="{{ item['image'] }}" alt="Food image" class="card-img-top">
+                    <div class="card-body">
+                        {% if item['link'] %}
+                            <a class="url_heading" href="{{ item['link'] }}" target="_blank"><h3 class="card-title mbr-section-subtitle mbr-fonts-style display-5"><strong>{{ item['name']}}</strong></h3></a>
+                        {% else %}
+                            <h3 class="card-title mbr-section-subtitle mbr-fonts-style display-5"><strong>{{ item['name']}}</strong></h3>
+                        {% endif %}
+                        <div class="card-read-more"><a href="{{ url_for('nutrient_by_id', nutri_id=item['id'], name=item['name'])}}" class="btn-link btn-block">
+                        <strong>Explore Nutrient facts</strong></a></div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+</div>
+{% include 'footer.html' %}

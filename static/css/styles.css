@@ -1,0 +1,214 @@
+/* Header elements */
+
+.navbar{
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.navbar-nav .nav-item{
+    padding-right: 50px;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+.navbar-heading{
+    padding-left: 80px;
+}
+
+/*Body hierarchy*/
+body{
+    flex-direction: column;
+}
+
+/* Home page elements */
+.main-heading{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+.heading{
+    text-align: center;
+    position: relative;
+    top: 250px;
+    font-size: 30px;
+}
+
+/* Search button and input */
+.height{
+    height: 100vh;
+}
+
+
+.search{
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+}
+
+.search input{
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+
+.search input:focus{
+    box-shadow: none;
+    border: 2px solid grey;
+}
+
+
+.form-control{
+    font-size: 15px;
+}
+
+.search button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: dark;
+    font-size: 15px;
+}
+
+
+/* Footer page elements */
+footer{
+    background-color: #f1f6f9;
+}
+
+.original-site{
+    text-align: center;
+    font-size: 15px;
+}
+
+/* About page elements */
+.about{
+    /*position:relative;
+    top: 250px;
+    left: 450px;*/
+    text-align: center;
+    max-width: 600px;
+    font-size: 24px;
+}
+
+.about-heading{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*item not found element*/
+.no_item_found{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*Card elements*/
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 20px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.url_heading{
+    text-decoration: none;
+    color: black;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-read-more a {
+    text-decoration: none !important;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    font-size:10px;
+}
+
+.card-read-more {
+    border-top: 2px solid #D4D4D4;
+}
+
+
+/*NUTRIENT ELEMENT*/
+/* Define styles for the split-screen container */
+.split-screen {
+    display: flex;
+    height: auto;
+    color: white;
+}
+
+.large, .small{
+    /*flex:1;*/
+    display: flex;
+    width: 100%;
+}
+
+/* Define styles for each section */
+.left, .middle-left, .middle-right, .right {
+    flex: 1; /* Each section takes equal space horizontally */
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.data{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+@media (max-width: 1088px){
+    .split-screen{
+        display: block;
+    }
+    .large, .small{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 767px){
+    .large, .small{
+        display: block;
+    }
+    .left, .middle-left, .middle-right, .right {
+        margin-bottom: 20px;
+    }
+}
